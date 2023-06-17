@@ -12,7 +12,7 @@ MINIO_ACCESS_KEY_ID="minio-access-key"
 MINIO_SECRET_ACCESS_KEY="minio-secret-access-key"
 MINIO_DEFAULT_REGION="minio-region"
 MINIO_BUCKET="minio-bucket"
-MINIO_USE_PATH_STYLE_ENDPOINT=fminiose
+MINIO_USE_PATH_STYLE_ENDPOINT=false
 MINIO_URL="minio-full-url-with-bucket-include"
 MINIO_ENDPOINT="minio-endpoint-without-bucket-included"
 ```
