@@ -14,7 +14,7 @@ class FilesystemServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/minio.php', 'filesystems.disks');
+        $this->mergeConfigFrom(__DIR__.'/../config/minio.php', 'filesystems.disks');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
@@ -34,6 +34,7 @@ class FilesystemServiceProvider extends \Illuminate\Support\ServiceProvider
             $config['bucket_endpoint'] = false;
             $config['use_path_style_endpoint'] = true;
             $config['url'] = "{$config['endpoint']}/{$config['bucket']}";
+
             return (new FilesystemManager($app))->createS3Driver($config);
         });
     }
