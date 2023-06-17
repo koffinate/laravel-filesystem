@@ -1,0 +1,57 @@
+{
+  "name": "koffinate/flysystem-aws-s3",
+  "description": "PHP support for S3 compatibility with Minio Support",
+  "keywords": [
+    "php", "laravel", "library", "s3", "filesystem", "flysystem",
+    "koffinate", "koffin", "coffee",
+    "much", "yusron", "arif", "yusronarif"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Much Yusron Arif",
+      "email": "yusron.arif4@gmail.com",
+      "homepage": "https://yusronarif.github.io",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.1",
+    "illuminate/console": "^9.0|^10.0",
+    "illuminate/filesystem": "^9.0|^10.0",
+    "illuminate/support": "^9.0|^10.0",
+    "league/flysystem-aws-s3-v3": "^3.15"
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Koffinate\\S3\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Koffinate\\S3\\Test\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "1.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "Koffinate\\S3\\S3ServiceProvider"
+      ],
+      "aliases": {}
+    }
+  }
+}
