@@ -7,7 +7,7 @@ composer require koffinate/flysystem-aws-s3
 
 ## Configuration
 add this to your environment
-```bash
+```dotenv
 MINIO_ACCESS_KEY_ID="minio-access-key"
 MINIO_SECRET_ACCESS_KEY="minio-secret-access-key"
 MINIO_DEFAULT_REGION="minio-region"
@@ -17,7 +17,7 @@ MINIO_URL="minio-full-url-with-bucket-include"
 MINIO_ENDPOINT="minio-endpoint-without-bucket-included"
 ```
 or use default laravel aws-s3 environment,
-```bash
+```dotenv
 AWS_ACCESS_KEY_ID="s3-access-key"
 AWS_SECRET_ACCESS_KEY="s3-secret-access-key"
 AWS_DEFAULT_REGION="s3-region"
@@ -40,14 +40,14 @@ use normally laravel filesystem as you go.
 
 make sure your `FILESYSTEM_DISK` on `.env` set to `minio` as default,
 
-```bash
+```dotenv
 ...
 FILESYSTEM_DISK=minio
 ...
 ```
 
 or `MEDIA_DISK` if using `spatie/laravel-medialibrary`'s package.
-```bash
+```dotenv
 ...
 MEDIA_DISK=minio
 ...
