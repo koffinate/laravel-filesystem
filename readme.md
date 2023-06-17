@@ -38,6 +38,21 @@ php artisan koffinate:s3-config
 ## Usage
 use normally laravel filesystem as you go.
 
+make sure your `FILESYSTEM_DISK` on `.env` set to `minio` as default,
+
+```bash
+...
+FILESYSTEM_DISK=minio
+...
+```
+
+or `MEDIA_DISK` if using `spatie/laravel-medialibrary`'s package.
+```bash
+...
+MEDIA_DISK=minio
+...
+```
+
 ### Obtain disk usage
 you can use it directly using method `disk` from `Storage`,
 
