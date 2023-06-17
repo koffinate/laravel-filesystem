@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Koffinate\Filesystem\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

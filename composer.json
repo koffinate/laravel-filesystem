@@ -1,6 +1,6 @@
 {
-  "name": "koffinate/flysystem-aws-s3",
-  "description": "PHP support for S3 compatibility with Minio Support",
+  "name": "koffinate/laravel-filesystem",
+  "description": "Illuminate filesystem compatibility with Minio Support",
   "keywords": [
     "php", "laravel", "library", "s3", "filesystem", "flysystem",
     "koffinate", "koffin", "coffee",
@@ -30,12 +30,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Koffinate\\S3\\": "src/"
+      "Koffinate\\Filesystem\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Koffinate\\S3\\Test\\": "tests/"
+      "Koffinate\\Filesystem\\Test\\": "tests/"
     }
   },
   "config": {
@@ -49,7 +49,7 @@
     },
     "laravel": {
       "providers": [
-        "Koffinate\\S3\\S3ServiceProvider"
+        "Koffinate\\Filesystem\\FilesystemServiceProvider"
       ],
       "aliases": {}
     }

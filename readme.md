@@ -1,8 +1,8 @@
-# S3 Compatibility with Minio support 
+# Filesystem Compatibility with Minio support 
 
 ## Installation
 ```bash
-composer require koffinate/flysystem-aws-s3
+composer require koffinate/laravel-filesystem
 ```
 
 ## Configuration
@@ -12,9 +12,10 @@ MINIO_ACCESS_KEY_ID="minio-access-key"
 MINIO_SECRET_ACCESS_KEY="minio-secret-access-key"
 MINIO_DEFAULT_REGION="minio-region"
 MINIO_BUCKET="minio-bucket"
-MINIO_USE_PATH_STYLE_ENDPOINT=false
+MINIO_USE_PATH_STYLE_ENDPOINT=true
 MINIO_URL="minio-full-url-with-bucket-include"
 MINIO_ENDPOINT="minio-endpoint-without-bucket-included"
+MINIO_VISIBILITY="public"
 ```
 or use default laravel aws-s3 environment,
 ```dotenv
@@ -25,6 +26,7 @@ AWS_BUCKET="s3-bucket"
 AWS_USE_PATH_STYLE_ENDPOINT=false
 AWS_URL="s3-full-url-with-bucket-include"
 AWS_ENDPOINT="s3-endpoint-without-bucket-included"
+AWS_VISIBILITY="public"
 ```
 actually if you want to use both of minio and s3 together, use `AWS_` and `MINIO_` on your `.env`.
 
@@ -32,7 +34,7 @@ actually if you want to use both of minio and s3 together, use `AWS_` and `MINIO
 You can still customize the configuration by defining new disks with `minio` key to `config/filesystem.php`. \
 or use this command to generate from default config
 ```bash
-php artisan koffinate:s3-config
+php artisan koffinate:minio-config
 ```
 
 ## Usage
