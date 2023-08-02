@@ -1,5 +1,17 @@
 # Filesystem Compatibility with Minio support 
 
+
+[![Software License](https://img.shields.io/github/license/koffinate/laravel-filesystem?color=green-light&logo=github&style=flat-square)](LICENSE)
+[![Latest Version](https://img.shields.io/github/v/release/koffinate/laravel-filesystem.svg?logo=github&style=flat-square&sort=semver)](https://github.com/koffinate/laravel-filesystem/releases)
+[![Packagist Version](https://img.shields.io/packagist/v/koffinate/laravel-filesystem?logo=composer&style=flat-square&sort=semver)](https://packagist.org/packages/koffinate/laravel-filesystem)
+[![Build Status](https://app.travis-ci.com/koffinate/laravel-filesystem.svg?branch=master)](https://app.travis-ci.com/koffinate/laravel-filesystem)
+[![StyleCI](https://github.styleci.io/repos/192271400/shield)](https://github.styleci.io/repos/192271400)
+[![Total Downloads](https://img.shields.io/packagist/dt/koffinate/laravel-filesystem?logo=composer&style=flat-square)](https://packagist.org/packages/koffinate/laravel-filesystem)
+
+[![GitHub forks](https://img.shields.io/github/forks/koffinate/laravel-filesystem?style=social)](https://github.com/koffinate/laravel-filesystem)
+[![GitHub stars](https://img.shields.io/github/stars/koffinate/laravel-filesystem?style=social)](https://github.com/koffinate/laravel-filesystem)
+
+
 ## Installation
 ```bash
 composer require koffinate/laravel-filesystem

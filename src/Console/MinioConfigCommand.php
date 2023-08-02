@@ -37,17 +37,17 @@ class MinioConfigCommand extends \Illuminate\Console\Command
     public function handle(): void
     {
         $configFile = config_path('filesystems.php');
-        $koffinateConfig = __DIR__ . '/../../config/config.stub';
+        $koffinateConfig = __DIR__.'/../../config/config.stub';
 
-        if (!is_writable($configFile) && !$this->tryToWrite($configFile)) {
+        if (! is_writable($configFile) && ! $this->tryToWrite($configFile)) {
             $this->components->error("Config file is not writable, cannot write config to $configFile");
-            die();
+            exit;
         }
 
         $config = include $configFile;
-        if (!empty($config['disks']['minio'])) {
+        if (! empty($config['disks']['minio'])) {
             $this->components->error("Minio disk already applied on $configFile");
-            die();
+            exit;
         }
 
         try {
@@ -62,8 +62,7 @@ class MinioConfigCommand extends \Illuminate\Console\Command
 
             file_put_contents($configFile, $configContent);
 
-            $this->components->info("Koffinate S3 configuration successfully applied");
-
+            $this->components->info('Koffinate S3 configuration successfully applied');
         } catch (\Exception $e) {
             $this->components->error("failed on applying koffinate s3 config on $configFile with error message: {$e->getMessage()}");
         }
@@ -107,21 +106,21 @@ class MinioConfigCommand extends \Illuminate\Console\Command
         $mod .= (($perms & 0x0100) ? 'r' : '-');
         $mod .= (($perms & 0x0080) ? 'w' : '-');
         $mod .= (($perms & 0x0040) ?
-            (($perms & 0x0800) ? 's' : 'x' ) :
+            (($perms & 0x0800) ? 's' : 'x') :
             (($perms & 0x0800) ? 'S' : '-'));
 
         // Group
         $mod .= (($perms & 0x0020) ? 'r' : '-');
         $mod .= (($perms & 0x0010) ? 'w' : '-');
         $mod .= (($perms & 0x0008) ?
-            (($perms & 0x0400) ? 's' : 'x' ) :
+            (($perms & 0x0400) ? 's' : 'x') :
             (($perms & 0x0400) ? 'S' : '-'));
 
         // Other
         $mod .= (($perms & 0x0004) ? 'r' : '-');
         $mod .= (($perms & 0x0002) ? 'w' : '-');
         $mod .= (($perms & 0x0001) ?
-            (($perms & 0x0200) ? 't' : 'x' ) :
+            (($perms & 0x0200) ? 't' : 'x') :
             (($perms & 0x0200) ? 'T' : '-'));
 
         return $mod;
