@@ -26,7 +26,7 @@
     "league/flysystem-aws-s3-v3": "^3.29"
   },
   "require-dev": {
-    "pestphp/pest": "^2.36|^3.7"
+    "pestphp/pest": "^2.36|^3.7|^4.0"
   },
   "autoload": {
     "psr-4": {
