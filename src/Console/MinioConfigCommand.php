@@ -1,6 +1,6 @@
 <?php
 
-namespace Koffinate\Filesystem\Console;
+namespace Kfn\Filesystem\Console;
 
 class MinioConfigCommand extends \Illuminate\Console\Command
 {
@@ -9,7 +9,7 @@ class MinioConfigCommand extends \Illuminate\Console\Command
      *
      * @var string
      */
-    protected $signature = 'koffinate:minio-config';
+    protected $signature = 'kfn:minio-config';
 
     /**
      * The console command description.
@@ -82,12 +82,12 @@ class MinioConfigCommand extends \Illuminate\Console\Command
         }
     }
 
-    /**
-     * @param  string  $path
-     *
-     * @return string
-     */
-    private function filemod(string $path): string
+    ///**
+    // * @param  string  $path
+    // *
+    // * @return string
+    // */
+    /*private function filemod(string $path): string
     {
         $perms = fileperms($path);
 
@@ -124,5 +124,5 @@ class MinioConfigCommand extends \Illuminate\Console\Command
             (($perms & 0x0200) ? 'T' : '-'));
 
         return $mod;
-    }
+    }*/
 }

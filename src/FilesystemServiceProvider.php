@@ -1,6 +1,6 @@
 <?php
 
-namespace Koffinate\Filesystem;
+namespace Kfn\Filesystem;
 
 use Illuminate\Filesystem\FilesystemManager;
 use Illuminate\Support\Facades\Storage;
